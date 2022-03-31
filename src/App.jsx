@@ -53,7 +53,7 @@ const App = () => {
       axios
       //if running locally place this infront of axios url call https://cors-anywhere.herokuapp.com/
 			.get(
-				`https://www.metaweather.com/api/location/search/?query=${userInput}`
+				`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?query=${userInput}`
 			)
 			.then((res) => {
         console.log(res.data)
@@ -89,7 +89,7 @@ const App = () => {
     axios
     .get(
       //if running locally place this infront of axios url call https://cors-anywhere.herokuapp.com/
-      `https://www.metaweather.com/api/location/${cityObject.woeid}`
+      `https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${cityObject.woeid}`
     )
     .then((res) => {
       setForecastData(res.data)
